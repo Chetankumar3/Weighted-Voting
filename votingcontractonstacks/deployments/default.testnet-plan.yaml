@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: votingcontractonstack
+            expected-sender: ST2JSKH3QGB99C5C3APY1ZKRPK4P3BB8F68AN17YJ
+            cost: 56170
+            path: "contracts\\votingcontractonstack.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
